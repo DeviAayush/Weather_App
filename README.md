@@ -15,12 +15,12 @@
 ## 🖼️ Screenshots
 
 ### 🔍 Search Interface
-![Search View](![Screenshot (192)](https://github.com/user-attachments/assets/fcc27479-a997-4a0e-a0ac-2c623ce4e866)
-)
+![Screenshot (192)](https://github.com/user-attachments/assets/fcc27479-a997-4a0e-a0ac-2c623ce4e866)
+
 
 ### 🌥️ Forecast Display
-![Forecast View](![Screenshot (193)](https://github.com/user-attachments/assets/ce39896e-ac18-4c73-869b-c7100e81b00f)
-)
+![Screenshot (193)](https://github.com/user-attachments/assets/ce39896e-ac18-4c73-869b-c7100e81b00f)
+
 
 ---
 
