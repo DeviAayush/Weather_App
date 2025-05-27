@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f7f7f7;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    color: #333;
+}
+
+.container h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#search-box {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    margin-right: 10px;
+    transition: border-color 0.3s ease;
+}
+
+#search-box:focus {
+    border-color: #007bff;
+}
+
+#search-button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#weather-info {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.current-weather {
+    margin-bottom: 30px;
+}
+
+.current-weather h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.weather-icon img {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+}
+
+.temperature {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.weather-condition {
+    font-size: 20px;
+    font-style: italic;
+    color: #555;
+    text-transform: capitalize;
+}
+
+.hourly-forecast h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.forecast-items-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.forecast-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100px;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+.forecast-item p {
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+.forecast-item img {
+    width: 40px;
+    height: 40px;
+    margin: 5px 0;
+}
+
+.forecast-item p:last-child {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#error-message {
+    background-color: #ffdddd;
+    color: #d8000c;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #d8000c;
+    animation: fadeIn 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    #search-box {
+        font-size: 14px;
+    }
+
+    #search-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .current-weather h2 {
+        font-size: 24px;
+    }
+
+    .temperature {
+        font-size: 40px;
+    }
+
+    .weather-condition {
+        font-size: 18px;
+    }
+
+    .hourly-forecast h3 {
+        font-size: 18px;
+    }
+
+    .forecast-item p {
+        font-size: 13px;
+    }
+    .forecast-item p:last-child {
+        font-size: 15px;
+    }
+    .forecast-item img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    #search-box {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    #search-button {
+        width: 100%;
+    }
+
+    .forecast-items-grid {
+
+    }
+}
+
+
+.bg-clear-sky {
+    background-image: url('https://images.unsplash.com/photo-1562155618-e12adaf990f4?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-few-clouds {
+    background-image: url('https://images.unsplash.com/photo-1500740516770-92bd004b996e?q=80&w=2072&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-scattered-clouds {
+    background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1948&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-broken-clouds {
+    background-image: url('https://images.unsplash.com/photo-1483977296448-b838b243ee0d?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-shower-rain, .bg-rain {
+    background-image: url('https://images.unsplash.com/photo-1519692933481-e14e246f7d95?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-thunderstorm {
+    background-image: url('https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28?q=80&w=2071&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-snow {
+    background-image: url('https://images.unsplash.com/photo-1542601098-3681564e15f7?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-mist {
+    background-image: url('https://images.unsplash.com/photo-1485236715568-dd9218a26f70?q=80&w=2069&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-default {
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}

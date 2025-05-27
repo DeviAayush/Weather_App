@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>The Weather Sucks</h1>
+        <header>
+            <input type="text" id="search-box" placeholder="Enter city name...">
+            <button id="search-button">Search</button>
+        </header>
+
+        <main id="weather-info" class="hidden">
+            <section class="current-weather">
+                <h2 id="city-name">City Name</h2>
+                <div class="weather-icon">
+                    <img id="weather-icon-img" src="" alt="Weather Icon">
+                </div>
+                <p class="temperature"><span id="temperature-value">--</span>°C</p>
+                <p class="weather-condition" id="weather-description">Weather Condition</p>
+            </section>
+
+            <section id="hourly-forecast" class="hourly-forecast">
+                <h3>Hourly Forecast</h3>
+                <div id="hourly-forecast-items" class="forecast-items-grid">
+
+                </div>
+            </section>
+        </main>
+
+        <div id="error-message" class="hidden">
+            <p>City not found. Please try again.</p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
